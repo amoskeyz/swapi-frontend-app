@@ -1,0 +1,58 @@
+.popular {
+  text-align: center;
+  padding: 2em 4em;
+  margin: 2em 0;
+  @media screen and (max-width: 450px) {
+    padding: 2em;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+    grid-gap: 4em;
+    justify-content: space-between;
+    @media screen and (max-width: 450px) {
+        font-size: 0.8em;
+      }
+  }
+  .character-contain {
+    grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
+    justify-content: space-between;
+  }
+  &__title {
+    text-align: center;
+    margin: 0 auto 2em auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    p {
+      font-size: 1.7em;
+      font-weight: 600;
+      font-family: "Red Hat Display" serif;
+      margin: 0.5em 0;
+      padding: 0;
+    }
+    div {
+      width: 6em;
+      height: 0.5em;
+      background-color: black;
+    }
+  }
+  &__view-more {
+    margin: 3.7em auto 0;
+    width: 10em;
+    padding: 1.2em;
+    font-size: 0.9em;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: none;
+    background-color: transparent;
+    border-radius: 0.4em;
+    font-family: "Salsa", cursive;
+  }
+  .not-found {
+    font-size: 1.3em;
+    font-family: "Salsa", cursive;
+    color: rgb(0, 6, 37);
+  }
+}
