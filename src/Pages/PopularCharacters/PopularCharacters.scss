@@ -1,0 +1,32 @@
+.popular-characters {
+    .filters {
+        display: flex;
+        padding: 2em;
+        width: 88%;
+        margin: 0 auto;
+       
+        label {
+            font-size: 1.3em;
+            text-transform: uppercase;
+            margin-right: 1em;
+            color: grey;
+        }
+
+        select {
+            padding: 1em 3em;
+            font-size: 1em;
+            border: 2px solid rgb(95, 95, 95);
+            border-radius: 0.4em;
+            color: grey;
+        }
+        @media screen and (max-width: 600px) {
+            font-size: 0.8em;
+            label, select {
+                margin: 1em;
+            }
+        }
+        .gender-wrap {
+            margin:0 auto;
+        }
+    }
+}

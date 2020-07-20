@@ -1,25 +1,26 @@
-import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { hot } from 'react-hot-loader';
-import Loader from './components/Loader';
-import NavBar from './components/NavBar';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import "./App.css";
+import StarshipView from "./Pages/StarshipView";
+import PopularStarships from "./Pages/PopularStarship";
+import PopularCharacters from "./Pages/PopularCharacters";
+import Home from "./Pages/Home";
+import CharacterView from "./Pages/CharacterView";
+import PlanetView from "./Pages/PlanetView";
 
-const HomePage = lazy(() => import('./views/HomePage'));
-function App() {
+const App = () => {
   return (
-    <main className='App'>
+    <div className="App">
       <Router>
-        <Loader />
-        <Suspense fallback={<Loader tempLoad={true} />}>
-          <NavBar />
-          <Switch>
-            <Route exact path='/' component={HomePage} />
-          </Switch>
-        </Suspense>
+        <Route exact path="/" component={Home} />
+        <Route path="/starship/:id" component={StarshipView} />
+        <Route path="/character/:id" component={CharacterView} />
+        <Route path="/planet/:id" component={PlanetView} />
+        <Route path="/popular-starships" component={PopularStarships} />
+        <Route path="/popular-characters" component={PopularCharacters} />
       </Router>
-    </main>
+    </div>
   );
-}
+};
 
-export default hot(module)(App);
+export default App;

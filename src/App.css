@@ -1,3 +1,20 @@
-.App {
-  /* text-align: center; */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+button, input, a, select {
+  outline: none;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
 }
